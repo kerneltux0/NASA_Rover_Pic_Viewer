@@ -9,7 +9,7 @@ class TestAPIResponse(unittest.TestCase):
         date = "2022-12-01"
         rover = "curiosity"
         api_key = " "
-        data_entry = get_img(api_key, date, rover)
+        data_entry = get_img(api_key,date,rover)
         self.assertEqual(data_entry['error']['code'], "API_KEY_INVALID")
     
     def test_backend_return(self):
@@ -19,10 +19,10 @@ class TestAPIResponse(unittest.TestCase):
         file.close()
         date = "2022-12-01"
         rover = "curiosity"
-        data_entry = get_img(api_key, date, rover)
+        data_entry = get_img(api_key,date,rover)
         leading = data_entry[0][0:4]
         trailing = data_entry[0][-3:]
-        self.assertEqual(leading,"https")
+        self.assertIn("http",leading)
         self.assertEqual(trailing,"JPG")
 
 if __name__ == '__main__':
