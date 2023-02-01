@@ -13,7 +13,10 @@ class TestAPIResponse(unittest.TestCase):
         self.assertEqual(data_entry['error']['code'], "API_KEY_INVALID")
     
     def test_backend_return(self):
-        api_key = os.path.join( os.getcwd(), 'api_key.txt' )
+        api_key_file = os.path.join( os.getcwd(), 'api_key.txt' )
+        file = open(api_key_file)
+        api_key = file.readline()
+        file.close()
         date = "2022-12-01"
         rover = "curiosity"
         data_entry = get_img(api_key, date, rover)
