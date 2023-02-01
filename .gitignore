@@ -8,6 +8,8 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+nasa/*
+api_key.txt
 build/
 develop-eggs/
 dist/
