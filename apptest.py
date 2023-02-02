@@ -3,7 +3,7 @@ import os
 
 from lib.backend import get_img
 #from factory import Factory
-from search import search_api_imgs
+from lib.search import search_api_imgs
 
 class TestAPIResponse(unittest.TestCase):
     

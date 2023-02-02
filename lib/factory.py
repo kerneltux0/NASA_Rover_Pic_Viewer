@@ -1,4 +1,4 @@
-from lib.backend import get_img
+from backend import get_img
 from key_file import get_api_key
 
 class Factory:
