@@ -1,6 +1,5 @@
 import unittest
 import os
-#import code
 
 from lib.api_query import get_img
 
@@ -26,13 +25,6 @@ class TestAPIResponse(unittest.TestCase):
         trailing = data_entry[0][-3:]
         self.assertIn("http",leading)
         self.assertEqual(trailing,"JPG")
-
-    def test_api_search(self):
-        date = "2022-11-01"
-        rover = "curiosity"
         
-
-        
-
 if __name__ == '__main__':
         unittest.main()
