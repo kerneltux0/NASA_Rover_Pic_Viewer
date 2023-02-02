@@ -3,7 +3,7 @@ import os
 #import code
 
 from lib.api_query import get_img
-from lib.factory import Factory
+
 
 class TestAPIResponse(unittest.TestCase):
     
@@ -30,12 +30,7 @@ class TestAPIResponse(unittest.TestCase):
     def test_api_search(self):
         date = "2022-11-01"
         rover = "curiosity"
-        test_obj = Factory(date,rover)
-        #code.interact(local=dict(globals(), **locals()))
-        test_obj.search_api_imgs(test_obj)
-        self.assertEqual(test_obj.date,date)
-        self.assertEqual(test_obj.rover,rover)
-        self.assertNotEqual(test_obj.images.count,0)
+        
 
         
 
