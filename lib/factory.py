@@ -1,4 +1,4 @@
-from backend import get_img
+from lib.api_query import get_img
 from key_file import get_api_key
 
 class Factory:
@@ -7,7 +7,7 @@ class Factory:
         self.rover = rover
         self.images = []
 
-    def search_api_imgs(date,rover):
-        api_images = get_img(get_api_key(),date,rover)
+    def search_api_imgs(self):
+        api_images = get_img(get_api_key(),self.date,self.rover)
         self.images.append(api_images)
         return self
