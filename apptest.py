@@ -4,7 +4,6 @@ import os
 
 from lib.api_query import get_img
 from lib.factory import Factory
-from lib.search import search_api_imgs
 
 class TestAPIResponse(unittest.TestCase):
     
