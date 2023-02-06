@@ -2,6 +2,7 @@ import unittest
 import os
 
 from lib.api_query import get_img
+from lib.ui_backend import year_generator
 
 
 class TestAPIResponse(unittest.TestCase):
@@ -25,6 +26,13 @@ class TestAPIResponse(unittest.TestCase):
         trailing = data_entry[0][-3:]
         self.assertIn("http",leading)
         self.assertEqual(trailing,"JPG")
+    
+    def test_year_gen(self):
+        year_low = 2002
+        year_high = 2020
+        test_year = year_generator(year_low,year_high)
+        self.assertGreater(test_year,year_low)
+        self.assertLess(test_year,year_high)
         
 if __name__ == '__main__':
         unittest.main()
