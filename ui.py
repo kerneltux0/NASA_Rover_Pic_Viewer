@@ -1,3 +1,5 @@
+from lib.ui_backend import year_generator, month_day
+
 def main_menu():
     print('Welcome to the NASA Rover Pic Viewer!')
     print(' ')
