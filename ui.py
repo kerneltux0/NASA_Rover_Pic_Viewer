@@ -1,4 +1,4 @@
-from lib.ui_backend import year_generator, month_day
+from lib.ui_backend import year_generator, month_day, run_search
 
 def main_menu():
     print('Welcome to the NASA Rover Pic Viewer!')
@@ -26,8 +26,12 @@ def main_menu():
     print('2: Specific date')
     date_option = input()
     if date_option == '1':
-        year_generator(year_low,year_high)
-        month_day()
+        year = year_generator(year_low,year_high)
+        mon_day = month_day()
+        date = year + "-" + mon_day
+        #run_search(date,rover)
     elif date_option == '2':
-        other_func(rover)
+        print("Please enter the date in YYYYY-MM-DD format")
+        date = input()
+        #run_search(date,rover)
     
