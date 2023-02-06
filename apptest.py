@@ -1,8 +1,9 @@
 import unittest
 import os
+from datetime import date
 
 from lib.api_query import get_img
-from lib.ui_backend import year_generator
+from lib.ui_backend import year_generator, month_day
 
 
 class TestAPIResponse(unittest.TestCase):
@@ -33,6 +34,15 @@ class TestAPIResponse(unittest.TestCase):
         test_year = year_generator(year_low,year_high)
         self.assertGreater(test_year,year_low)
         self.assertLess(test_year,year_high)
+
+    def test_on_this_date(self):
+        today = date.today()
+        month = today.strftime('%m')
+        day = today.strftime('%d')
+        mon_day = month + day
+        odt_gen = month_day()
+        self.assertEqual(mon_day,odt_gen)
+
         
 if __name__ == '__main__':
         unittest.main()
