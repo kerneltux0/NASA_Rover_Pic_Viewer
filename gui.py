@@ -1,7 +1,6 @@
 from tkinter import *
 from tkinter import ttk
 import tkinter.font as tkFont
-#import ttkbootstrap as tb
 
 # write funcs here
 
@@ -16,10 +15,6 @@ main_content_frame = ttk.Frame(window)
 img_buttons_frame = ttk.Frame(main_content_frame)
 
 data_disp_frame = ttk.Frame(main_content_frame)
-
-#button_style = tb.Style()
-#button_style.configure('my.Tbutton', font=("Comic Sans", 16))
-#left_button = tb.Button(lef_button_frame, text="<-", style='my.Tbutton')
 
 left_button = ttk.Button(img_buttons_frame, text="<-")
 
