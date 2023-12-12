@@ -1,7 +1,6 @@
 from tkinter import *
 from tkinter import ttk
 import tkinter.font as tkFont
-import ttkbootstrap as tb
 
 # write funcs here
 
